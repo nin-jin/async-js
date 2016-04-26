@@ -1,3 +1,8 @@
-module.exports.say = ( greeting , user ) => {
-    console.log( greeting + ', ' + user.getName() + '!' )
+module.exports.say = ( greeting , user , done ) => {
+    user.getName( ( error, name ) => {
+        if( error ) return done( error )
+
+        console.log( greeting + ', ' + name + '!' )
+        done()
+    } )
 }

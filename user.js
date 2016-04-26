@@ -2,13 +2,37 @@ var fs = require( 'fs' )
 
 var config
 
-var getConfig = () => {
-    if( config ) return config
+var getConfig = done => {
 
-    var configText = fs.readFileSync( 'config.json' )
-    return config = JSON.parse( configText )
+    if( config ) {
+
+        process.nextTick( () => {
+            done( null , config )
+        } )
+
+    } else {
+
+        fs.readFile( 'config.json' , ( error , configText ) => {
+            if( error ) return done( error )
+
+            try {
+                config = JSON.parse( configText )
+            } catch( error ) {
+                return done( error )
+            }
+
+            done( null , config )
+        } )
+
+    }
 }
 
-module.exports.getName = () => {
-    return getConfig().name
+module.exports.getName = done => {
+
+    getConfig( ( error , config ) => {
+        if( error ) done( error )
+
+        done( null , config.name )
+    } )
+
 }

@@ -1,7 +1,7 @@
 {
   "name": "hello-async-js",
   "version": "1.0.0",
-  "description": "Simple synchronous application",
+  "description": "Simple asynchronous application in nodejs style",
   "main": "index.js",
   "scripts": {
     "test": "node ."
