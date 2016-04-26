@@ -1,3 +1,5 @@
 module.exports.say = ( greeting , user ) => {
-    console.log( greeting + ', ' + user.getName() + '!' )
+    return user.getName().then( name => {
+        console.log( greeting + ', ' + name + '!' )
+    } )
 }
