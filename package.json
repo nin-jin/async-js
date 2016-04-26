@@ -1,11 +1,14 @@
 {
   "name": "hello-async-js",
   "version": "1.0.0",
-  "description": "Simple synchronous application",
+  "description": "Simple asynchronous application with fibers",
   "main": "index.js",
   "scripts": {
     "test": "node ."
   },
   "author": "jin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fibers": "^1.0.10"
+  }
 }
