@@ -1,0 +1,11 @@
+{
+  "name": "hello-async-js",
+  "version": "1.0.0",
+  "description": "Simple synchronous application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "jin",
+  "license": "ISC"
+}
