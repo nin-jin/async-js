@@ -1,7 +1,6 @@
 Asynchronous javascript code with different paradigms
 
-# Synchronous
-[sync](https://github.com/nin-jin/async-js/compare/sync?diff=unified&name=sync) - base synchronous realization of simple application.
+# [Synchronous style](https://github.com/nin-jin/async-js/compare/sync?diff=unified&name=sync)
 
 * [+] Very easy logic.
 * [+] Easy to support.
