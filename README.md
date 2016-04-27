@@ -5,7 +5,7 @@ Asynchronous javascript code with different paradigms
 * [+] Very easy logic.
 * [+] Easy to support.
 * [--] No parallelism.
-* [--] Can't be isomorphic in general.
+* [--] Can not be isomorphic in general.
 
 ## Start
 ```sh
@@ -41,23 +41,23 @@ We want to load user info asynchronously. Let's do it with..
 ## [Fibers&Futures style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
 
 * [*] Need to start application in fiber.
-* [+] Needn't to rewrite all funcitons.
+* [+] Need not to rewrite all funcitons.
 * [+] Easy to support.
 * [+] Easy parallelism.
-* [--] Cann't be isomorphic.
+* [--] Can not be isomorphic (NodeJS only).
 
 ## [Fibers&Proxies style](https://github.com/nin-jin/async-js/compare/sync...async-fibers-proxy)
 
 * [*] Need to start application in fiber
-* [+] Needn't to rewrite all funcitons.
+* [+] Need not to rewrite all funcitons.
 * [+] Easy to support.
 * [+] Very easy parallelism.
-* [--] Can't be isomorphic.
+* [--] Can not be isomorphic (NodeJS only).
 
 ## [Atoms style](https://github.com/nin-jin/async-js/compare/sync...async-atoms)
 
 * [--] Need to convert application from control-flow to data-flow.
-* [+] Needn't to rewrite all funcitons.
+* [+] Need not to rewrite all funcitons.
 * [*] Medium to support.
 * [+] Easy parallelism.
 * [+] Can be isomorphic.
