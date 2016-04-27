@@ -1,14 +1,21 @@
 var fs = require( 'fs' )
 
-var config
+var Atom = require( 'jin2' ).Atom
 
-var getConfig = () => {
-    if( config ) return config
+var config = new Atom( () => {
 
-    var configText = fs.readFileSync( 'config.json' )
-    return config = JSON.parse( configText )
-}
+    fs.readFile( 'config.json' , ( error , configText ) => {
+        if( error ) config.fail( error )
+
+        try {
+            config.push( JSON.parse( configText ) )
+        } catch( error ) {
+            config.fail( error )
+        }
+    } )
+
+} )
 
 module.exports.getName = () => {
-    return getConfig().name
+    return config.get().name
 }

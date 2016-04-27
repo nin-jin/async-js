@@ -1,5 +1,13 @@
+var Atom = require( 'jin2' ).Atom
+
 var user = require( './user' )
 var greeter = require( './greeter' )
 
-greeter.say( 'Hello' , user )
-greeter.say( 'Bye' , user )
+var script = new Atom( () => {
+    greeter.say( 'Hello' , user )
+    greeter.say( 'Bye' , user )
+
+    return null
+} )
+
+script.pull()

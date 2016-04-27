@@ -1,11 +1,14 @@
 {
   "name": "hello-async-js",
   "version": "1.0.0",
-  "description": "Simple synchronous application",
+  "description": "Simple asynchronous application with atoms",
   "main": "index.js",
   "scripts": {
     "test": "node ."
   },
   "author": "jin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jin2": "^1.0.0"
+  }
 }
