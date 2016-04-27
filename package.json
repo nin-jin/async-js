@@ -1,11 +1,14 @@
 {
   "name": "hello-async-js",
   "version": "1.0.0",
-  "description": "Simple synchronous application",
+  "description": "Simple asynchronous application with fibers and proxies",
   "main": "index.js",
   "scripts": {
-    "test": "node ."
+    "test": "node --harmony-proxies ."
   },
   "author": "jin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jin": "^1.6.2"
+  }
 }

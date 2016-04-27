@@ -1,5 +1,7 @@
-var user = require( './user' )
-var greeter = require( './greeter' )
+require( 'jin' ).application( $ => {
 
-greeter.say( 'Hello' , user )
-greeter.say( 'Bye' , user )
+    var $my = $.jin.loader( __dirname + '/' )
+
+    $my.greeter.say( 'Hello' , $my.user )
+    $my.greeter.say( 'Bye' , $my.user )
+} )
