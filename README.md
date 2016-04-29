@@ -52,6 +52,8 @@ We want to load user info asynchronously. Let's do it with..
 * [+] Easy parallelism.
 * [--] Can not be isomorphic (NodeJS only).
 
+[More info](https://github.com/laverdet/node-fibers)
+
 ## [Fibers&Proxies style](https://github.com/nin-jin/async-js/compare/sync...async-fibers-proxy)
 
 * [*] Need to start application in fiber
