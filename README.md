@@ -38,6 +38,8 @@ We want to load user info asynchronously. Let's do it with..
 * [+] Easy parallelism.
 * [+] Can be isomorphic.
 
+[More info](https://learn.javascript.ru/promise)
+
 ## Generators
 
 ## async/await
