@@ -54,6 +54,8 @@ We want to load user info asynchronously. Let's do it with..
 * [+] Very easy parallelism.
 * [--] Can not be isomorphic (NodeJS only).
 
+[More info](https://github.com/nin-jin/node-jin#sod)
+
 ## [Atoms style](https://github.com/nin-jin/async-js/compare/sync...async-atoms)
 
 * [--] Need to convert application from control-flow to data-flow.
