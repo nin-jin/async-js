@@ -38,6 +38,10 @@ We want to load user info asynchronously. Let's do it with..
 * [+] Easy parallelism.
 * [+] Can be isomorphic.
 
+## Generators
+
+## async/await
+
 ## [Fibers&Futures style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
 
 * [*] Need to start application in fiber.
