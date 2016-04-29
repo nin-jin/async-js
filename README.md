@@ -40,9 +40,9 @@ We want to load user info asynchronously. Let's do it with..
 
 [More info](https://learn.javascript.ru/promise)
 
-## Generators
+## Generators style
 
-## async/await
+## async/await style
 
 ## [Fibers&Futures style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
 
