@@ -63,3 +63,5 @@ We want to load user info asynchronously. Let's do it with..
 * [*] Medium to support.
 * [+] Easy parallelism.
 * [+] Can be isomorphic.
+
+[More info (russian)](https://habrahabr.ru/post/235121/)
