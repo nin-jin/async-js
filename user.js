@@ -1,13 +1,12 @@
-var fs = require( 'fs' )
 var Future = require( 'fibers/future' )
+var FS = Future.wrap( require( 'fs' ) )
 
 var config
 
 var getConfig = () => {
     if( config ) return config
 
-    var configText = new Future
-    fs.readFile( 'config.json' , configText.resolver() )
+    var configText = FS.readFileFuture( 'config.json' )
     return config = JSON.parse( configText.wait() )
 }
 
