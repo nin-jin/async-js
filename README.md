@@ -53,7 +53,13 @@ We want to load user info asynchronously. Let's do it with..
 
 [More info](https://www.npmjs.com/package/co)
 
-## async/await style
+## [Async/await transformed to generators by Babel](https://github.com/nin-jin/async-js/compare/sync...async-await-babel)
+
+* [-] Need to rewrite all functions.
+* [-] Can not be isomorphic (requires [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
+* [-] Very slow (22ms).
+* [+] Easy to support.
+* [+] Easy parallelism.
 
 ## [Fibers style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
 
