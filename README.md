@@ -61,6 +61,8 @@ We want to load user info asynchronously. Let's do it with..
 * [+] Easy to support.
 * [+] Easy parallelism.
 
+[More info](https://babeljs.io/docs/plugins/transform-async-to-generator/)
+
 ## [Fibers style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
 
 * [-] Can not be isomorphic (NodeJS only).
