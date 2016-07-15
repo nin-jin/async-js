@@ -1,3 +1,3 @@
-module.exports.say = ( greeting , user ) => {
-    console.log( greeting + ', ' + user.getName() + '!' )
+module.exports.say = async ( greeting , user ) => {
+    console.log( greeting + ', ' + ( await user.getName() ) + '!' )
 }
