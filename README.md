@@ -76,7 +76,7 @@ TypeError: Cannot read property 'name' of null
 ## [Generators&co style](https://github.com/nin-jin/async-js/compare/sync...async-generators-co)
 
 * [-] Need to rewrite all functions.
-* [-] Can not be isomorphic (requires [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
+* [-] Can not be isomorphic (required [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
 * [-] Non informative stack trace.
 * [-] Slow (7ms).
 * [+] Easy to support.
@@ -94,7 +94,7 @@ TypeError: Cannot read property 'name' of null
 ## [Async/await transformed to generators by Babel](https://github.com/nin-jin/async-js/compare/sync...async-await-babel)
 
 * [-] Need to rewrite all functions.
-* [-] Can not be isomorphic (requires [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
+* [-] Can not be isomorphic (required [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
 * [-] Non informative stack trace.
 * [-] Very slow (22ms).
 * [+] Easy to support.
