@@ -95,6 +95,7 @@ TypeError: Cannot read property 'name' of null
 
 * [-] Need to rewrite all functions.
 * [-] Can not be isomorphic (required [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
+* [-] Expansive stack trace.
 * [-] Non informative stack trace.
 * [-] Very slow (22ms).
 * [+] Easy to support.
