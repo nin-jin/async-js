@@ -10,6 +10,7 @@ var script = done => {
             if( error ) return done( error )
             
             console.timeEnd( 'time' )
+            done()
         } )
     } )
 }
