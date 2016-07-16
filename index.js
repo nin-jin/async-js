@@ -8,4 +8,6 @@ async function app() {
     console.timeEnd('time')
 }
 
-app()
+app().catch( error => {
+    console.error( error )
+} )
