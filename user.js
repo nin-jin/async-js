@@ -6,7 +6,7 @@ var getConfig = done => {
 
     if( config ) {
 
-        process.nextTick( () => {
+        setImmediate( () => {
             done( null , config )
         } )
 
