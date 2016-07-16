@@ -8,11 +8,13 @@ Promise.resolve()
 } )
 .then( () => {
     return greeter.say( 'Bye' , user )
-    .then( () => {
-        console.timeEnd( 'time' )
-    } )
+} )
+.then( () => {
+    console.timeEnd( 'time' )
+} )
+.then( () => {
+    return greeter.say( 'Oops' , null )
 } )
 .catch( error => {
     console.error( error )
-    process.exit( 1 )
 } )
