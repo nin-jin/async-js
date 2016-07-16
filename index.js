@@ -1,11 +1,17 @@
 var user = require( './user' )
 var greeter = require( './greeter' )
 
-console.time( 'time' )
-greeter.say( 'Hello' , user )
+Promise.resolve()
 .then( () => {
-    greeter.say( 'Bye' , user )
+    console.time( 'time' )
+    return greeter.say( 'Hello' , user )
+} )
+.then( () => {
+    return greeter.say( 'Bye' , user )
     .then( () => {
         console.timeEnd( 'time' )
     } )
+} )
+.catch( error => {
+    console.error( error )
 } )
