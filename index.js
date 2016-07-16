@@ -9,6 +9,5 @@ co( function*() {
     yield greeter.say( 'Bye' , user )
     console.timeEnd( 'time')
 } ).catch( error => {
-    console.log( error )
+    console.error( error )
 } )
-
