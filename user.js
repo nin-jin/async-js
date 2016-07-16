@@ -4,13 +4,10 @@ var config
 
 var getConfig = done => {
 
-    if( config ) {
-
-        setImmediate( () => {
-            done( null , config )
-        } )
-
-    } else {
+    try {
+        if( config ) return setImmediate( () => {
+            return done( null , config )
+        })
 
         fs.readFile( 'config.json' , ( error , configText ) => {
             if( error ) return done( error )
@@ -21,18 +18,26 @@ var getConfig = done => {
                 return done( error )
             }
 
-            done( null , config )
-        } )
+            return done( null , config )
+        })
 
+    } catch( error ) {
+        return done( error )
     }
 }
 
 module.exports.getName = done => {
 
     getConfig( ( error , config ) => {
-        if( error ) done( error )
+        if( error ) return done( error )
 
-        done( null , config.name )
+        try {
+            var name = config.name
+        } catch( error ) {
+            return done( error )
+        }
+
+        return done( null , name )
     } )
 
 }

@@ -2,17 +2,35 @@ var user = require( './user' )
 var greeter = require( './greeter' )
 
 var script = done => {
-    console.time( 'time' )
-    greeter.say( 'Hello' , user , error => {
-        if( error ) return done( error )
-        
-        greeter.say( 'Bye' , user , error => {
+    try {
+        console.time( 'time' )
+
+        greeter.say( 'Hello' , user , error => {
             if( error ) return done( error )
+
+            try {
+
+                greeter.say( 'Bye' , user , error => {
+                    if( error ) return done( error )
+
+                    try {
+                        console.timeEnd( 'time' )
+                    } catch( error ) {
+                        return done( error )
+                    }
+
+                    return done()
+                } )
+
+            } catch( error ) {
+                return done( error )
+            }
             
-            console.timeEnd( 'time' )
-            done()
         } )
-    } )
+
+    } catch( error ) {
+        return done( error )
+    }
 }
 
 script( error => {
