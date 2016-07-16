@@ -12,7 +12,7 @@ var script = done => {
 
             console.timeEnd( 'time' )
 
-            greeter.say( 'Oops' , null , done )
+            done()
         } )
 
     } )
