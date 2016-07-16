@@ -12,9 +12,6 @@ Promise.resolve()
 .then( () => {
     console.timeEnd( 'time' )
 } )
-.then( () => {
-    return greeter.say( 'Oops' , null )
-} )
 .catch( error => {
     console.error( error )
 } )
