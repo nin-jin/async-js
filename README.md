@@ -109,11 +109,6 @@ TypeError: Cannot read property 'name' of null
     at undefined.next (native)
     at step (C:\proj\async-js\user.js:1:253)
     at C:\proj\async-js\user.js:1:430
-    at run (C:\proj\async-js\node_modules\core-js\modules\es6.promise.js:89:22)
-    at C:\proj\async-js\node_modules\core-js\modules\es6.promise.js:102:28
-    at flush (C:\proj\async-js\node_modules\core-js\modules\_microtask.js:18:9)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
 ```
 
 ## [Fibers style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
