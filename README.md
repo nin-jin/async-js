@@ -105,16 +105,15 @@ TypeError: Cannot read property 'name' of null
 
 ```
 TypeError: Cannot read property 'name' of null
-    at _callee$ (user.js:17:26)
-    at tryCatch (./node_modules/regenerator-runtime/runtime.js:62:40)
-    at GeneratorFunctionPrototype.invoke [as _invoke] (./node_modules/regenerator-runtime/runtime.js:336:22)
-    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (./node_modules/regenerator-runtime/runtime.js:95:21)
-    at step (./user.js:3:191)
-    at ./user.js:3:368
-    at run (./node_modules\core-js\modules\es6.promise.js:89:22)
-    at ./node_modules/core-js/modules/es6.promise.js:102:28
-    at flush (./node_modules/core-js/modules/_microtask.js:18:9)
+    at Object.<anonymous> (user.js:18:12)
+    at undefined.next (native)
+    at step (C:\proj\async-js\user.js:1:253)
+    at C:\proj\async-js\user.js:1:430
+    at run (C:\proj\async-js\node_modules\core-js\modules\es6.promise.js:89:22)
+    at C:\proj\async-js\node_modules\core-js\modules\es6.promise.js:102:28
+    at flush (C:\proj\async-js\node_modules\core-js\modules\_microtask.js:18:9)
     at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
 ```
 
 ## [Fibers style](https://github.com/nin-jin/async-js/compare/sync...async-fibers)
