@@ -1,5 +1,7 @@
 Asynchronous javascript code with different paradigms
 
+[Article about that (ru).](https://habrahabr.ru/post/307288/)
+
 # [Synchronous style](https://github.com/nin-jin/async-js/compare/sync?diff=unified&name=sync)
 
 * [-] No parallelism.
