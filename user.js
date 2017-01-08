@@ -1,18 +1,21 @@
 var fs = require( 'fs' )
 
-var Atom = require( 'jin2' ).Atom
+var Atom = require( 'mol_atom' ).$mol_atom
+var Wait = require( 'mol_atom' ).$mol_atom_wait
 
-var config = new Atom( () => {
+var config = new Atom( 'config' , () => {
 
     fs.readFile( 'config.json' , ( error , configText ) => {
-        if( error ) config.fail( error )
+        if( error ) config.push( error )
 
         try {
             config.push( JSON.parse( configText ) )
         } catch( error ) {
-            config.fail( error )
+            config.push( error )
         }
     } )
+    
+    throw new Wait( 'Config loading...' )
 
 } )
 

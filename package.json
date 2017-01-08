@@ -9,7 +9,7 @@
   "author": "jin",
   "license": "ISC",
   "dependencies": {
-    "jin2": "^1.0.0",
+    "mol_atom": "^2.0.0",
     "source-map-support": "^0.4.2"
   }
 }

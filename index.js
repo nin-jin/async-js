@@ -1,10 +1,11 @@
-var Atom = require( 'jin2' ).Atom
+var Atom = require( 'mol_atom' ).$mol_atom
 
 var user = require( './user' )
 var greeter = require( './greeter' )
 
-var script = new Atom( () => {
-    console.time( 'time' )
+var measuring = false
+var script = new Atom( 'script' , () => {
+    if( !measuring ) console.time( 'time' ) , measuring = true
     greeter.say( 'Hello' , user )
     greeter.say( 'Bye' , user )
     console.timeEnd( 'time' )
@@ -12,4 +13,4 @@ var script = new Atom( () => {
     return null
 } )
 
-script.pull()
+script.get()
