@@ -148,12 +148,14 @@ TypeError: Cannot read property 'name' of null
 
 ```
 TypeError: Cannot read property 'name' of null
-    at Object.module.exports.getName (./user.js:20:24)
+    at Object.module.exports.getName (./user.js:22:24)
     at Object.module.exports.say (./greeter.js:2:41)
-    at $jin2_atom.Atom [as pull_] (./index.js:8:13)
-    at $jin2_atom.pull (./node_modules/jin2/index.js:285:25)
-    at Function.$jin2_atom.induce (./node_modules/jin2/index.js:510:22)
-    at Timeout._onTimeout (./node_modules/jin2/index.js:493:19)
-    at tryOnTimeout (timers.js:224:11)
-    at Timer.listOnTimeout (timers.js:198:5)
+    at $mol_atom.Atom [as handler] (./index.js:9:13)
+    at $mol_atom.pull (./node_modules/atom.ts:137:17)
+    at $mol_atom.actualize (./node_modules/atom.ts:126:23)
+    at $mol_atom.get (./node_modules/atom.ts:75:9)
+    at Function.$mol_atom.sync (./node_modules/atom.ts:328:34)
+    at $mol_defer.run (./node_modules/atom.ts:314:11)
+    at Function.$mol_defer.run (./defer/defer.ts:53:67)
+    at Timeout._onTimeout (./defer/defer.ts:28:11)
 ```
