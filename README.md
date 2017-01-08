@@ -99,7 +99,7 @@ TypeError: Cannot read property 'name' of null
 * [-] Can not be isomorphic (required [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) support).
 * [-] Expansive stack trace.
 * [-] Non informative stack trace.
-* [-] Very slow (22ms).
+* [-] Very slow (25ms).
 * [+] Easy to support.
 * [+] Easy parallelism.
 
@@ -164,7 +164,7 @@ TypeError: Cannot read property 'name' of null
 
 | Property                 | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
 |--------------------------|----------|----------|----------|------------|---------------|----------|------
-| **Execution time on V8** | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 22 ms         | **6 ms** | 25 ms
+| **Execution time on V8** | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 25 ms         | **6 ms** | 25 ms
 | **Parallelism**          | no       | hard     | **easy** | **easy**   | **easy**      | **easy** | **easy**
 | **Isomorphism**          | some api | **yes**  | **yes**  | some vm    | some vm       | no       | **yes**
 | **Expansive stack**      | yes      | **no**   | **no**   | **no**     | **no**        | **no**   | yes
