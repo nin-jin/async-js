@@ -132,3 +132,28 @@ TypeError: Cannot read property 'name' of null
     at Future.task.error (./index.js:11:17)
     at ./node_modules/fibers/future.js:467:21
 ```
+
+## [Atoms style](https://github.com/nin-jin/async-js/compare/sync...async-atoms)
+
+* [-] Need to convert application from control-flow to data-flow.
+* [-] Expansive stack trace.
+* [-] Very slow (24ms).
+* [*] Medium to support.
+* [+] Need not to rewrite all funcitons.
+* [+] Easy parallelism.
+* [+] Can be isomorphic.
+* [+] Informative stack trace.
+
+[More info (russian)](https://habrahabr.ru/post/317360/)
+
+```
+TypeError: Cannot read property 'name' of null
+    at Object.module.exports.getName (./user.js:20:24)
+    at Object.module.exports.say (./greeter.js:2:41)
+    at $jin2_atom.Atom [as pull_] (./index.js:8:13)
+    at $jin2_atom.pull (./node_modules/jin2/index.js:285:25)
+    at Function.$jin2_atom.induce (./node_modules/jin2/index.js:510:22)
+    at Timeout._onTimeout (./node_modules/jin2/index.js:493:19)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+```
