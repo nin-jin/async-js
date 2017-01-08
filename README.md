@@ -162,12 +162,12 @@ TypeError: Cannot read property 'name' of null
 
 # Comparison
 
-| Property            | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
-|---------------------|----------|----------|----------|------------|---------------|----------|------
-| Execution time      | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 22 ms         | **6 ms** | 25 ms
-| Parallelism         | no       | hard     | **easy** | **easy**   | **easy**      | **easy** | **easy**
-| Isomorphism         | some api | **yes**  | **yes**  | some vm    | some vm       | no       | **yes**
-| Expansive stack     | yes      | **no**   | **no**   | **no**     | **no**        | **no**   | yes
-| Informative stack   | **yes**  | no       | no       | no         | no            | **yes**  | **yes**
-| Complexity of use   | **easy** | hard     | hard     | **easy**   | **easy**      | **easy** | **easy**
-| Complexity of debug | **easy** | hard     | hard     | hard       | hard          | **easy** | **easy**   
+| **Property**            | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
+|-------------------------|----------|----------|----------|------------|---------------|----------|------
+| **Execution time**      | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 22 ms         | **6 ms** | 25 ms
+| **Parallelism**         | no       | hard     | **easy** | **easy**   | **easy**      | **easy** | **easy**
+| **Isomorphism**         | some api | **yes**  | **yes**  | some vm    | some vm       | no       | **yes**
+| **Expansive stack**     | yes      | **no**   | **no**   | **no**     | **no**        | **no**   | yes
+| **Informative stack**   | **yes**  | no       | no       | no         | no            | **yes**  | **yes**
+| **Complexity of use**   | **easy** | hard     | hard     | **easy**   | **easy**      | **easy** | **easy**
+| **Complexity of debug** | **easy** | hard     | hard     | hard       | hard          | **easy** | **easy**   
