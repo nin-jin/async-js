@@ -137,7 +137,7 @@ TypeError: Cannot read property 'name' of null
 
 * [-] Need to convert application from control-flow to data-flow.
 * [-] Expansive stack trace.
-* [-] Very slow (24ms).
+* [-] Very slow (25ms).
 * [*] Medium to support.
 * [+] Need not to rewrite all funcitons.
 * [+] Easy parallelism.
@@ -159,3 +159,15 @@ TypeError: Cannot read property 'name' of null
     at Function.$mol_defer.run (./defer/defer.ts:53:67)
     at Timeout._onTimeout (./defer/defer.ts:28:11)
 ```
+
+# Comparison
+
+| Property            | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
+|---------------------|----------|----------|----------|------------|---------------|----------|------
+| Execution time      | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 22 ms         | **6 ms** | 25 ms
+| Parallelism         | no       | hard     | **easy** | **easy**   | **easy**      | **easy** | **easy**
+| Isomorphism         | some api | **yes**  | **yes**  | some vm    | some vm       | no       | **yes**
+| Expansive stack     | yes      | **no**   | **no**   | **no**     | **no**        | **no**   | yes
+| Informative stack   | **yes**  | no       | no       | no         | no            | **yes**  | **yes**
+| Complexity of use   | **easy** | hard     | hard     | **easy**   | **easy**      | **easy** | **easy**
+| Complexity of debug | **easy** | hard     | hard     | hard       | hard          | **easy** | **easy**   
