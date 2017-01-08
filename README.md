@@ -162,7 +162,7 @@ TypeError: Cannot read property 'name' of null
 
 # Comparison
 
-| **Property**            | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
+| Property                | Sync     | NodeJS   | Promises | Generators | Async + Babel | Fibers   | Atoms
 |-------------------------|----------|----------|----------|------------|---------------|----------|------
 | **Execution time**      | **4 ms** | **6 ms** | **7 ms** | **7 ms**   | 22 ms         | **6 ms** | 25 ms
 | **Parallelism**         | no       | hard     | **easy** | **easy**   | **easy**      | **easy** | **easy**
