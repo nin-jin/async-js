@@ -3,20 +3,19 @@ var fs = require( 'fs' )
 var Atom = require( 'mol_atom' ).$mol_atom
 var Wait = require( 'mol_atom' ).$mol_atom_wait
 
-var config = new Atom( 'config' , () => {
+var configText = new Atom( 'configText' , () => {
 
-    fs.readFile( 'config.json' , ( error , configText ) => {
+    fs.readFile( 'config.json' , ( error , text ) => {
         if( error ) config.push( error )
-
-        try {
-            config.push( JSON.parse( configText ) )
-        } catch( error ) {
-            config.push( error )
-        }
+        configText.push( text )
     } )
     
     throw new Wait( 'Config loading...' )
 
+} )
+
+var config = new Atom( 'config' , () => {
+    return JSON.parse( configText.get() )
 } )
 
 module.exports.getName = () => {
